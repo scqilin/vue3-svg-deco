@@ -1,8 +1,9 @@
 import { App } from 'vue';
-import Border from './components/Border.vue';
+import { BaseBorder, GradientBorder } from './components/borders';
 
 const components = {
-  Border
+  BaseBorder,
+  GradientBorder
 };
 
 export default {
@@ -14,4 +15,4 @@ export default {
 };
 
 // 允许按需引入
-export { Border };
+export { BaseBorder, GradientBorder };

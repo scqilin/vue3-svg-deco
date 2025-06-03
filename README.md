@@ -30,7 +30,7 @@ import { Border } from 'vue3-svg-deco'
 
 ```vue
 <template>
-  <Border :width="500" :height="300" type="tech" color="#3a7afe" />
+  <Border :width="500" :height="300" :strokeWidth="2" color="#3a7afe" />
 </template>
 
 <script setup>
@@ -45,8 +45,7 @@ import { Border } from 'vue3-svg-deco'
 | width | number | 300 | 宽度 |
 | height | number | 200 | 高度 |
 | color | string | '#3a7afe' | 边框颜色 |
-| type | 'tech'\|'gradient'\|'neon' | 'tech' | 边框风格 |
-
+| strokeWidth| number | 2 | 边框宽度 |
 ## 开发
 
 ```bash

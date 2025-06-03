@@ -1,16 +1,16 @@
-import Border from './components/Border.vue';
+// import { BaseBorder, GradientBorder } from './components/borders';
 
-declare module '@vue/runtime-core' {
-  export interface GlobalComponents {
-    Border: typeof Border;
-  }
-}
+// declare module '@vue/runtime-core' {
+//   export interface GlobalComponents {
+//     BaseBorder: typeof BaseBorder;
+//     GradientBorder: typeof GradientBorder;
+//   }
+// }
 
-export type BorderProps = {
-  width?: number;
-  height?: number;
-  color?: string;
-  type?: 'tech' | 'gradient' | 'neon';
-};
+// export type BorderProps = {
+//   width?: number;
+//   height?: number;
+//   color?: string;
+// };
 
-export { Border };
+// export { BaseBorder, GradientBorder };
