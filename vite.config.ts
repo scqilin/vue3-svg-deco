@@ -7,8 +7,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'Vue3SvgDecorators',
-      fileName: (format) => `vue3-svg-decorators.${format}.js`,
+      name: 'Vue3SvgDeco',
+      fileName: (format) => `vue3-svg-deco.${format}.js`,
     },
     rollupOptions: {
       external: ['vue'],

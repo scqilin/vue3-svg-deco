@@ -7,23 +7,17 @@
           <stop offset="100%" :stop-color="color2 || color" />
         </linearGradient>
       </defs>
-      <path 
-        :d="borderPath" 
-        stroke="url(#gradient)" 
-        fill="transparent" 
-        :stroke-width="props.strokeWidth"
-      />
-      <foreignObject :x="props.strokeWidth * 10" :y="props.strokeWidth * 10" 
-                    :width="width - props.strokeWidth * 20" 
-                    :height="height - props.strokeWidth * 20">
+      <path :d="borderPath" stroke="url(#gradient)" fill="transparent" :stroke-width="props.strokeWidth" />
+      <ForeignObjectWrapper :xy="props.strokeWidth" :width="width" :height="height">
         <slot></slot>
-      </foreignObject>
+      </ForeignObjectWrapper>
     </svg>
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue';
+import ForeignObjectWrapper from '../common/ForeignObjectWrapper.vue';
 
 const props = defineProps({
   width: { type: Number, default: 300 },
@@ -36,7 +30,7 @@ const props = defineProps({
 const borderPath = computed(() => {
   const { width, height, strokeWidth } = props;
   const offset = strokeWidth / 2;
-   return `M${offset},${offset} L${width - offset},${offset} L${width - offset},${height - offset} L${offset},${height - offset} Z`;
+  return `M${offset},${offset} L${width - offset},${offset} L${width - offset},${height - offset} L${offset},${height - offset} Z`;
 });
 </script>
 

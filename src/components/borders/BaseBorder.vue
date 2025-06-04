@@ -1,21 +1,15 @@
 <template>
-    <svg :width="width" :height="height" xmlns="http://www.w3.org/2000/svg">
-      <path 
-        :d="borderPath" 
-        :stroke="color" 
-        fill="transparent" 
-        :stroke-width="props.strokeWidth"
-      />
-      <foreignObject :x="props.strokeWidth" :y="props.strokeWidth" 
-                    :width="width - props.strokeWidth * 2" 
-                    :height="height - props.strokeWidth * 2">
-        <slot></slot>
-      </foreignObject>
-    </svg>
+  <svg :width="width" :height="height" xmlns="http://www.w3.org/2000/svg">
+    <path :d="borderPath" :stroke="color" fill="transparent" :stroke-width="props.strokeWidth" />
+    <ForeignObjectWrapper :xy="props.strokeWidth" :width="width" :height="height">
+      <slot></slot>
+    </ForeignObjectWrapper>
+  </svg>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue';
+import ForeignObjectWrapper from '../common/ForeignObjectWrapper.vue';
 
 const props = defineProps({
   width: { type: Number, default: 300 },
@@ -31,6 +25,4 @@ const borderPath = computed(() => {
 });
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
