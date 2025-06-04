@@ -1,7 +1,7 @@
 {
   "name": "vue3-svg-deco",
   "private": false,
-  "version": "0.2.0",
+  "version": "0.4.0",
   "description": "A Vue 3 SVG-based decoration component library for dashboards (borders, headers, corners, etc.)",
   "keywords": ["vue3", "svg", "decoration", "dashboard", "ui", "frame"],
   "license": "MIT",
@@ -10,13 +10,19 @@
     "url": "https://github.com/scqilin/vue3-svg-deco.git"
   },
   "main": "dist/vue3-svg-deco.umd.js",
-  "module": "dist/vue3-svg-deco.es.js",
+  "module": "dist/vue3-svg-deco.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue3-svg-deco.js",
+      "require": "./dist/vue3-svg-deco.umd.js"
+    }
+  },
   "types": "dist/index.d.ts",
   "files": ["dist"],
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "publish": "npm publish"
   },
@@ -31,6 +37,7 @@
     "@vue/tsconfig": "^0.7.0",
     "typescript": "~5.8.3",
     "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.4",
     "vue-tsc": "^2.2.8"
   }
 }

@@ -7,12 +7,12 @@ declare module '@vue/runtime-core' {
   }
 }
 
-export type BorderProps = {
-  width?: number;
-  height?: number;
-  color?: string;
-  color2?: string;
-  strokeWidth?: number;
-};
+// export type BorderProps = {
+//   width?: number;
+//   height?: number;
+//   color?: string;
+//   color2?: string;
+//   strokeWidth?: number;
+// };
 
 export { BaseBorder, GradientBorder };

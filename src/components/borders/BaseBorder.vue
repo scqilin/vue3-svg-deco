@@ -11,6 +11,7 @@
 import { computed } from 'vue';
 import ForeignObjectWrapper from '../common/ForeignObjectWrapper.vue';
 
+
 const props = defineProps({
   width: { type: Number, default: 300 },
   height: { type: Number, default: 200 },
