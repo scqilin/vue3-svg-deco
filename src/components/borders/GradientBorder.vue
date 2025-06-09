@@ -4,10 +4,23 @@
       <defs>
         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" :stop-color="color" />
+          <stop offset="50%" stop-color="#00ff00" />
           <stop offset="100%" :stop-color="color2 || color" />
+          <animateTransform 
+            attributeName="gradientTransform"
+            type="rotate"
+            from="0 0.5 0.5"
+            to="360 0.5 0.5"
+            :dur="duration"
+            repeatCount="indefinite"
+          />
         </linearGradient>
       </defs>
-      <path :d="borderPath" stroke="url(#gradient)" fill="transparent" :stroke-width="props.strokeWidth" />
+      <rect :x="strokeWidth / 2" :y="strokeWidth / 2" rx="4" ry="4" :width="width - strokeWidth"
+        :height="height - strokeWidth" fill="none" stroke="url(#gradient)" :stroke-width="strokeWidth" stroke-dasharray="10,10"
+        stroke-linecap="round">
+        <animate attributeName="stroke-dashoffset" from="0" to="-200" :dur="duration" repeatCount="indefinite" />
+      </rect>
       <ForeignObjectWrapper :xy="props.strokeWidth" :width="width" :height="height">
         <slot></slot>
       </ForeignObjectWrapper>
@@ -16,7 +29,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
 import ForeignObjectWrapper from '../common/ForeignObjectWrapper.vue';
 
 const props = defineProps({
@@ -24,14 +36,10 @@ const props = defineProps({
   height: { type: Number, default: 200 },
   color: { type: String, default: '#3a7afe' },
   color2: { type: String },
-  strokeWidth: { type: Number, default: 2 }
+  strokeWidth: { type: Number, default: 2 },
+  duration: { type: String, default: '15s' }
 });
 
-const borderPath = computed(() => {
-  const { width, height, strokeWidth } = props;
-  const offset = strokeWidth / 2;
-  return `M${offset},${offset} L${width - offset},${offset} L${width - offset},${height - offset} L${offset},${height - offset} Z`;
-});
 </script>
 
 <style scoped>

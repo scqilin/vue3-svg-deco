@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>10 New SVG Borders (11-20)</title>
+    <style>
+        .border-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .border-item {
+            border: 1px solid #eee;
+            padding: 10px;
+            text-align: center;
+        }
+        svg {
+            display: block;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+        }
+        h3 {
+            color: #333;
+            text-align: center;
+            margin: 5px 0 15px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="border-container">
+       <!-- 边框51: 简约科技边框 -->
+        <div class="border-item">
+            <h3>51. 简约科技边框</h3>
+            <svg width="300" height="200">
+                <polygon fill="rgba(0,0,0,0)" points="7,5 293,5 293,195 7,195"></polygon>
+                <circle fill="#90caf8" cx="5" cy="5" r="2"></circle>
+                <circle fill="#90caf8" cx="295" cy="5" r="2"></circle>
+                <circle fill="#90caf8" cx="295" cy="195" r="2"></circle>
+                <circle fill="#90caf8" cx="5" cy="195" r="2"></circle>
+                <polyline stroke="#1890FF" points="10,5 290,5" stroke-width="1"></polyline>
+                <polyline stroke="#1890FF" points="10,195 290,195" stroke-width="1"></polyline>
+                <polyline stroke="#1890FF" points="5,50 5,150" stroke-width="1"></polyline>
+                <polyline stroke="#1890FF" points="295,50 295,150" stroke-width="1"></polyline>
+            </svg>
+        </div>
+        <!-- 边框52: 双线科技边框 -->
+        <div class="border-item">
+            <h3>52. 双线科技边框</h3>
+            <svg width="300" height="200">
+                <polygon fill="rgba(0,0,0,0)" points="7,5 293,5 293,195 7,195"></polygon>
+                <circle fill="#90caf8" cx="5" cy="5" r="2"></circle>
+                <circle fill="#90caf8" cx="295" cy="5" r="2"></circle>
+                <circle fill="#90caf8" cx="295" cy="195" r="2"></circle>
+                <circle fill="#90caf8" cx="5" cy="195" r="2"></circle>
+                <polyline stroke="#1890FF" points="10,5 290,5" stroke-width="1"></polyline>
+                <polyline stroke="#1890FF" points="10,195 290,195" stroke-width="1"></polyline>
+                <polyline stroke="#1890FF" points="5,50 5,150" stroke-width="1"></polyline>
+                <polyline stroke="#1890FF" points="295,50 295,150" stroke-width="1"></polyline>
+                <!-- 内层边框 -->
+                <polyline stroke="#90caf8" points="15,10 285,10" stroke-width="1" stroke-dasharray="3,3"></polyline>
+                <polyline stroke="#90caf8" points="15,190 285,190" stroke-width="1" stroke-dasharray="3,3"></polyline>
+                <polyline stroke="#90caf8" points="10,60 10,140" stroke-width="1" stroke-dasharray="3,3"></polyline>
+                <polyline stroke="#90caf8" points="290,60 290,140" stroke-width="1" stroke-dasharray="3,3"></polyline>
+            </svg>
+        </div>
+        <!-- 边框53: 动态端点边框 -->
+        <div class="border-item">
+            <h3>53. 动态端点边框</h3>
+            <svg width="300" height="200">
+                <polygon fill="rgba(0,0,0,0)" points="7,5 293,5 293,195 7,195"></polygon>
+                <!-- 动态圆点 -->
+                <circle fill="#1890FF" cx="5" cy="5" r="2">
+                    <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                <circle fill="#1890FF" cx="295" cy="5" r="2">
+                    <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+                </circle>
+                <circle fill="#1890FF" cx="295" cy="195" r="2">
+                    <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite" begin="1s"/>
+                </circle>
+                <circle fill="#1890FF" cx="5" cy="195" r="2">
+                    <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite" begin="1.5s"/>
+                </circle>
+                <!-- 边框线 -->
+                <polyline stroke="#1890FF" points="10,5 290,5" stroke-width="1"></polyline>
+                <polyline stroke="#1890FF" points="10,195 290,195" stroke-width="1"></polyline>
+                <polyline stroke="#1890FF" points="5,50 5,150" stroke-width="1"></polyline>
+                <polyline stroke="#1890FF" points="295,50 295,150" stroke-width="1"></polyline>
+                <!-- 装饰短线 -->
+                <polyline stroke="#90caf8" points="5,20 5,30" stroke-width="1"></polyline>
+                <polyline stroke="#90caf8" points="5,170 5,180" stroke-width="1"></polyline>
+                <polyline stroke="#90caf8" points="295,20 295,30" stroke-width="1"></polyline>
+                <polyline stroke="#90caf8" points="295,170 295,180" stroke-width="1"></polyline>
+            </svg>
+        </div>
+        <!-- 边框54: 斜角科技边框 -->
+        <div class="border-item">
+            <h3>54. 斜角科技边框</h3>
+            <svg width="300" height="200">
+                <polygon fill="rgba(0,0,0,0)" points="7,5 293,5 293,195 7,195"></polygon>
+                <!-- 四角装饰 -->
+                <path fill="none" stroke="#1890FF" d="M5,5 L15,5 L5,15 Z" stroke-width="1"></path>
+                <path fill="none" stroke="#1890FF" d="M295,5 L285,5 L295,15 Z" stroke-width="1"></path>
+                <path fill="none" stroke="#1890FF" d="M295,195 L285,195 L295,185 Z" stroke-width="1"></path>
+                <path fill="none" stroke="#1890FF" d="M5,195 L15,195 L5,185 Z" stroke-width="1"></path>
+                <!-- 主边框线 -->
+                <polyline stroke="#1890FF" points="20,5 280,5" stroke-width="1"></polyline>
+                <polyline stroke="#1890FF" points="20,195 280,195" stroke-width="1"></polyline>
+                <polyline stroke="#1890FF" points="5,20 5,180" stroke-width="1"></polyline>
+                <polyline stroke="#1890FF" points="295,20 295,180" stroke-width="1"></polyline>
+                <!-- 装饰点 -->
+                <circle fill="#90caf8" cx="150" cy="5" r="1.5"></circle>
+                <circle fill="#90caf8" cx="150" cy="195" r="1.5"></circle>
+                <circle fill="#90caf8" cx="5" cy="100" r="1.5"></circle>
+                <circle fill="#90caf8" cx="295" cy="100" r="1.5"></circle>
+            </svg>
+        </div>
+        <!-- 边框55: 脉冲流动边框 -->
+        <div class="border-item">
+            <h3>55. 脉冲流动边框</h3>
+            <svg width="300" height="200">
+                <polygon fill="rgba(0,0,0,0)" points="7,5 293,5 293,195 7,195"></polygon>
+                <!-- 四角圆点 -->
+                <circle fill="#90caf8" cx="5" cy="5" r="2"></circle>
+                <circle fill="#90caf8" cx="295" cy="5" r="2"></circle>
+                <circle fill="#90caf8" cx="295" cy="195" r="2"></circle>
+                <circle fill="#90caf8" cx="5" cy="195" r="2"></circle>
+                <!-- 脉冲动画边框 -->
+                <polyline stroke="#1890FF" points="10,5 290,5" stroke-width="1" stroke-dasharray="0,580">
+                    <animate attributeName="stroke-dasharray" values="0,580; 580,0" dur="3s" repeatCount="indefinite"/>
+                </polyline>
+                <polyline stroke="#1890FF" points="10,195 290,195" stroke-width="1" stroke-dasharray="0,580">
+                    <animate attributeName="stroke-dasharray" values="0,580; 580,0" dur="3s" repeatCount="indefinite" begin="1s"/>
+                </polyline>
+                <polyline stroke="#1890FF" points="5,50 5,150" stroke-width="1" stroke-dasharray="0,100">
+                    <animate attributeName="stroke-dasharray" values="0,100; 100,0" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+                </polyline>
+                <polyline stroke="#1890FF" points="295,50 295,150" stroke-width="1" stroke-dasharray="0,100">
+                    <animate attributeName="stroke-dasharray" values="0,100; 100,0" dur="2s" repeatCount="indefinite" begin="1.5s"/>
+                </polyline>
+                <!-- 装饰短线 -->
+                <polyline stroke="#90caf8" points="5,30 5,40" stroke-width="1"></polyline>
+                <polyline stroke="#90caf8" points="5,160 5,170" stroke-width="1"></polyline>
+                <polyline stroke="#90caf8" points="295,30 295,40" stroke-width="1"></polyline>
+                <polyline stroke="#90caf8" points="295,160 295,170" stroke-width="1"></polyline>
+            </svg>
+        </div>
+        <!-- 边框56: 粒子流动边框 -->
+        <div class="border-item">
+            <h3>56. 粒子流动边框</h3>
+            <svg width="300" height="200">
+                <polygon fill="rgba(0,0,0,0)" points="7,5 293,5 293,195 7,195"></polygon>
+                <!-- 四角装饰 -->
+                <circle fill="#1890FF" cx="5" cy="5" r="3"></circle>
+                <circle fill="#1890FF" cx="295" cy="5" r="3"></circle>
+                <circle fill="#1890FF" cx="295" cy="195" r="3"></circle>
+                <circle fill="#1890FF" cx="5" cy="195" r="3"></circle>
+                <!-- 粒子动画 -->
+                <circle fill="#90caf8" cx="10" cy="5" r="1.5">
+                    <animate attributeName="cx" values="10;290;10" dur="4s" repeatCount="indefinite"/>
+                </circle>
+                <circle fill="#90caf8" cx="10" cy="195" r="1.5">
+                    <animate attributeName="cx" values="10;290;10" dur="4s" repeatCount="indefinite" begin="1s"/>
+                </circle>
+                <circle fill="#90caf8" cx="5" cy="10" r="1.5">
+                    <animate attributeName="cy" values="10;190;10" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+                </circle>
+                <circle fill="#90caf8" cx="295" cy="10" r="1.5">
+                    <animate attributeName="cy" values="10;190;10" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+                </circle>
+                <!-- 静态边框线 -->
+                <polyline stroke="#1890FF" points="10,5 290,5" stroke-width="1" stroke-dasharray="5,3"></polyline>
+                <polyline stroke="#1890FF" points="10,195 290,195" stroke-width="1" stroke-dasharray="5,3"></polyline>
+                <polyline stroke="#1890FF" points="5,10 5,190" stroke-width="1" stroke-dasharray="5,3"></polyline>
+                <polyline stroke="#1890FF" points="295,10 295,190" stroke-width="1" stroke-dasharray="5,3"></polyline>
+            </svg>
+        </div>
+        <!-- 边框57: 光点扫描边框 -->
+        <div class="border-item">
+            <h3>57. 光点扫描边框</h3>
+            <svg width="300" height="200">
+                <polygon fill="rgba(0,0,0,0)" points="7,5 293,5 293,195 7,195"></polygon>
+                <!-- 扫描光点 -->
+                <circle fill="#90caf8" cx="5" cy="5" r="3">
+                    <animate attributeName="fill-opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"/>
+                </circle>
+                <circle fill="#90caf8" cx="295" cy="5" r="3">
+                    <animate attributeName="fill-opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite" begin="0.75s"/>
+                </circle>
+                <circle fill="#90caf8" cx="295" cy="195" r="3">
+                    <animate attributeName="fill-opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+                </circle>
+                <circle fill="#90caf8" cx="5" cy="195" r="3">
+                    <animate attributeName="fill-opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite" begin="2.25s"/>
+                </circle>
+                <!-- 扫描线 -->
+                <line stroke="#1890FF" x1="5" y1="5" x2="295" y2="5" stroke-width="1">
+                    <animate attributeName="stroke-opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+                </line>
+                <line stroke="#1890FF" x1="295" y1="5" x2="295" y2="195" stroke-width="1">
+                    <animate attributeName="stroke-opacity" values="0;1;0" dur="3s" repeatCount="indefinite" begin="0.75s"/>
+                </line>
+                <line stroke="#1890FF" x1="295" y1="195" x2="5" y2="195" stroke-width="1">
+                    <animate attributeName="stroke-opacity" values="0;1;0" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+                </line>
+                <line stroke="#1890FF" x1="5" y1="195" x2="5" y2="5" stroke-width="1">
+                    <animate attributeName="stroke-opacity" values="0;1;0" dur="3s" repeatCount="indefinite" begin="2.25s"/>
+                </line>
+                <!-- 静态边框 -->
+                <polyline stroke="#1890FF" points="10,5 290,5" stroke-width="1" stroke-opacity="0.3"></polyline>
+                <polyline stroke="#1890FF" points="10,195 290,195" stroke-width="1" stroke-opacity="0.3"></polyline>
+                <polyline stroke="#1890FF" points="5,10 5,190" stroke-width="1" stroke-opacity="0.3"></polyline>
+                <polyline stroke="#1890FF" points="295,10 295,190" stroke-width="1" stroke-opacity="0.3"></polyline>
+            </svg>
+        </div>
+        <!-- 边框58: 数据流边框 -->
+        <div class="border-item">
+            <h3>58. 数据流边框</h3>
+            <svg width="300" height="200">
+                <polygon fill="rgba(0,0,0,0)" points="7,5 293,5 293,195 7,195"></polygon>
+                <!-- 数据节点 -->
+                <circle fill="#90caf8" cx="5" cy="5" r="3"></circle>
+                <circle fill="#90caf8" cx="295" cy="5" r="3"></circle>
+                <circle fill="#90caf8" cx="295" cy="195" r="3"></circle>
+                <circle fill="#90caf8" cx="5" cy="195" r="3"></circle>
+                <!-- 数据流动画 -->
+                <path stroke="#1890FF" stroke-width="1" fill="none" stroke-dasharray="5,3" d="M10,5 L290,5">
+                    <animate attributeName="stroke-dashoffset" values="0;15;0" dur="2s" repeatCount="indefinite"/>
+                </path>
+                <path stroke="#1890FF" stroke-width="1" fill="none" stroke-dasharray="5,3" d="M295,10 L295,190">
+                    <animate attributeName="stroke-dashoffset" values="0;15;0" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+                </path>
+                <path stroke="#1890FF" stroke-width="1" fill="none" stroke-dasharray="5,3" d="M290,195 L10,195">
+                    <animate attributeName="stroke-dashoffset" values="0;15;0" dur="2s" repeatCount="indefinite" begin="1s"/>
+                </path>
+                <path stroke="#1890FF" stroke-width="1" fill="none" stroke-dasharray="5,3" d="M5,190 L5,10">
+                    <animate attributeName="stroke-dashoffset" values="0;15;0" dur="2s" repeatCount="indefinite" begin="1.5s"/>
+                </path>
+                <!-- 数据点 -->
+                <circle fill="#1890FF" cx="50" cy="5" r="1.5">
+                    <animate attributeName="cx" values="50;250;50" dur="4s" repeatCount="indefinite"/>
+                </circle>
+                <circle fill="#1890FF" cx="295" cy="50" r="1.5">
+                    <animate attributeName="cy" values="50;150;50" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+                </circle>
+            </svg>
+        </div>
+        <!-- 边框59: 网格波动边框 -->
+        <div class="border-item">
+            <h3>59. 网格波动边框</h3>
+            <svg width="300" height="200">
+                <polygon fill="rgba(0,0,0,0)" points="7,5 293,5 293,195 7,195"></polygon>
+                <!-- 网格线 -->
+                <path stroke="#90caf8" stroke-width="0.5" fill="none" d="M10,5 L290,5 L290,195 L10,195 Z" stroke-opacity="0.5">
+                    <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+                </path>
+                <!-- 波动动画 -->
+                <path stroke="#1890FF" stroke-width="1" fill="none" d="M10,5 Q150,30 290,5">
+                    <animate attributeName="d" values="M10,5 Q150,30 290,5; M10,5 Q150, 0 290,5; M10,5 Q150,30 290,5" dur="4s" repeatCount="indefinite"/>
+                </path>
+                <path stroke="#1890FF" stroke-width="1" fill="none" d="M290,5 Q260,100 290,195">
+                    <animate attributeName="d" values="M290,5 Q260,100 290,195; M290,5 Q310,100 290,195; M290,5 Q260,100 290,195" dur="4s" repeatCount="indefinite" begin="1s"/>
+                </path>
+                <path stroke="#1890FF" stroke-width="1" fill="none" d="M290,195 Q150,170 10,195">
+                    <animate attributeName="d" values="M290,195 Q150,170 10,195; M290,195 Q150,200 10,195; M290,195 Q150,170 10,195" dur="4s" repeatCount="indefinite" begin="2s"/>
+                </path>
+                <path stroke="#1890FF" stroke-width="1" fill="none" d="M10,195 Q40,100 10,5">
+                    <animate attributeName="d" values="M10,195 Q40,100 10,5; M10,195 Q0,100 10,5; M10,195 Q40,100 10,5" dur="4s" repeatCount="indefinite" begin="3s"/>
+                </path>
+                <!-- 四角装饰 -->
+                <circle fill="#1890FF" cx="5" cy="5" r="2">
+                    <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                <circle fill="#1890FF" cx="295" cy="5" r="2">
+                    <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+                </circle>
+                <circle fill="#1890FF" cx="295" cy="195" r="2">
+                    <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite" begin="1s"/>
+                </circle>
+                <circle fill="#1890FF" cx="5" cy="195" r="2">
+                    <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite" begin="1.5s"/>
+                </circle>
+            </svg>
+        </div>
+        <!-- 边框60: 极光边框 -->
+        <div class="border-item">
+            <h3>60. 极光边框</h3>
+            <svg width="300" height="200">
+                <polygon fill="rgba(0,0,0,0)" points="7,5 293,5 293,195 7,195"></polygon>
+                <!-- 极光背景 -->
+                <defs>
+                    <linearGradient id="aurora1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#1890FF" stop-opacity="0.7"/>
+                        <stop offset="100%" stop-color="#90caf8" stop-opacity="0.3"/>
+                    </linearGradient>
+                    <linearGradient id="aurora2" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#90caf8" stop-opacity="0.7"/>
+                        <stop offset="100%" stop-color="#1890FF" stop-opacity="0.3"/>
+                    </linearGradient>
+                </defs>
+                <!-- 极光动画 -->
+                <rect x="5" y="5" width="290" height="5" fill="url(#aurora1)">
+                    <animate attributeName="y" values="5;195;5" dur="8s" repeatCount="indefinite"/>
+                    <animate attributeName="height" values="5;10;5" dur="8s" repeatCount="indefinite"/>
+                </rect>
+                <rect x="5" y="5" width="5" height="190" fill="url(#aurora2)">
+                    <animate attributeName="x" values="5;295;5" dur="6s" repeatCount="indefinite" begin="2s"/>
+                    <animate attributeName="width" values="5;10;5" dur="6s" repeatCount="indefinite" begin="2s"/>
+                </rect>
+                <!-- 边框线 -->
+                <polyline stroke="#1890FF" points="10,5 290,5" stroke-width="1" stroke-opacity="0.7"></polyline>
+                <polyline stroke="#1890FF" points="10,195 290,195" stroke-width="1" stroke-opacity="0.7"></polyline>
+                <polyline stroke="#1890FF" points="5,10 5,190" stroke-width="1" stroke-opacity="0.7"></polyline>
+                <polyline stroke="#1890FF" points="295,10 295,190" stroke-width="1" stroke-opacity="0.7"></polyline>
+                <!-- 闪烁点 -->
+                <circle fill="#FFFFFF" cx="50" cy="20" r="1">
+                    <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+                </circle>
+                <circle fill="#FFFFFF" cx="250" cy="180" r="1">
+                    <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite" begin="1s"/>
+                </circle>
+            </svg>
+        </div>
+
+        <!-- 边框61: 星空边框 -->
+        <div class="border-item">
+            <h3>61. 星空边框</h3>
+            <svg width="300" height="200">
+                <polygon fill="rgba(0,0,0,0)" points="7,5 293,5 293,195 7,195"></polygon>
+                <defs>
+                    <filter id="star-glow" x="-20%" y="-20%" width="140%" height="140%">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+                        <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                    </filter>
+                </defs>
+                <!-- 星星 -->
+                <circle cx="30" cy="30" r="1" fill="white" filter="url(#star-glow)">
+                    <animate attributeName="r" values="1;1.5;1" dur="3s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="270" cy="30" r="1" fill="white" filter="url(#star-glow)">
+                    <animate attributeName="r" values="1;1.5;1" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+                </circle>
+                <circle cx="30" cy="170" r="1" fill="white" filter="url(#star-glow)">
+                    <animate attributeName="r" values="1;1.5;1" dur="3s" repeatCount="indefinite" begin="1s"/>
+                </circle>
+                <circle cx="270" cy="170" r="1" fill="white" filter="url(#star-glow)">
+                    <animate attributeName="r" values="1;1.5;1" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+                </circle>
+                <!-- 边框线 -->
+                <polyline stroke="#FFFFFF" stroke-width="1" stroke-dasharray="5,5" points="10,5 290,5"></polyline>
+                <polyline stroke="#FFFFFF" stroke-width="1" stroke-dasharray="5,5" points="10,195 290,195"></polyline>
+                <polyline stroke="#FFFFFF" stroke-width="1" stroke-dasharray="5,5" points="5,10 5,190"></polyline>
+                <polyline stroke="#FFFFFF" stroke-width="1" stroke-dasharray="5,5" points="295,10 295,190"></polyline>
+            </svg>
+        </div>
+
+        <!-- 边框62: 霓虹灯边框 -->
+        <div class="border-item">
+            <h3>62. 霓虹灯边框</h3>
+            <svg width="300" height="200">
+                <polygon fill="rgba(0,0,0,0)" points="7,5 293,5 293,195 7,195"></polygon>
+                <defs>
+                    <filter id="neon-glow" color-interpolation-filters="sRGB">
+                        <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+                        <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                    </filter>
+                </defs>
+                <!-- 霓虹灯效果 -->
+                <polyline stroke="#FF00FF" stroke-width="2" stroke-opacity="0.8" filter="url(#neon-glow)" points="10,5 290,5"></polyline>
+                <polyline stroke="#00FFFF" stroke-width="2" stroke-opacity="0.8" filter="url(#neon-glow)" points="10,195 290,195"></polyline>
+                <polyline stroke="#FFFF00" stroke-width="2" stroke-opacity="0.8" filter="url(#neon-glow)" points="5,10 5,190"></polyline>
+                <polyline stroke="#00FF00" stroke-width="2" stroke-opacity="0.8" filter="url(#neon-glow)" points="295,10 295,190"></polyline>
+                <!-- 闪烁动画 -->
+                <animate attributeName="stroke-opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite"/>
+            </svg>
+        </div>
+
+        <!-- 边框63: 水波纹边框 -->
+        <div class="border-item">
+            <h3>63. 水波纹边框</h3>
+            <svg width="300" height="200">
+                <polygon fill="rgba(0,0,0,0)" points="7,5 293,5 293,195 7,195"></polygon>
+                <defs>
+                    <filter id="water-ripple" x="-20%" y="-20%" width="140%" height="140%">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+                    </filter>
+                </defs>
+                <!-- 水波纹效果 -->
+                <rect x="5" y="5" width="290" height="5" fill="#00B4D8" opacity="0.5" filter="url(#water-ripple)">
+                    <animate attributeName="y" values="5;195;5" dur="6s" repeatCount="indefinite"/>
+                    <animate attributeName="height" values="5;10;5" dur="6s" repeatCount="indefinite"/>
+                </rect>
+                <rect x="5" y="5" width="5" height="190" fill="#0096C7" opacity="0.5" filter="url(#water-ripple)">
+                    <animate attributeName="x" values="5;295;5" dur="8s" repeatCount="indefinite" begin="1s"/>
+                    <animate attributeName="width" values="5;10;5" dur="8s" repeatCount="indefinite" begin="1s"/>
+                </rect>
+                <!-- 边框线 -->
+                <polyline stroke="#00B4D8" stroke-width="2" points="10,5 290,5"></polyline>
+                <polyline stroke="#00B4D8" stroke-width="2" points="10,195 290,195"></polyline>
+                <polyline stroke="#00B4D8" stroke-width="2" points="5,10 5,190"></polyline>
+                <polyline stroke="#00B4D8" stroke-width="2" points="295,10 295,190"></polyline>
+            </svg>
+        </div>
+
+        <!-- 边框64: 火焰边框 -->
+        <div class="border-item">
+            <h3>64. 火焰边框</h3>
+            <svg width="300" height="200">
+                <polygon fill="rgba(0,0,0,0)" points="7,5 293,5 293,195 7,195"></polygon>
+                <defs>
+                    <linearGradient id="flame" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#FF7D00"/>
+                        <stop offset="100%" stop-color="#FF0000"/>
+                    </linearGradient>
+                </defs>
+                <!-- 火焰效果 -->
+                <rect x="5" y="5" width="290" height="10" fill="url(#flame)">
+                    <animate attributeName="height" values="10;15;10" dur="2s" repeatCount="indefinite"/>
+                </rect>
+                <rect x="5" y="190" width="290" height="10" fill="url(#flame)">
+                    <animate attributeName="height" values="10;15;10" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+                </rect>
+                <rect x="5" y="5" width="10" height="190" fill="url(#flame)">
+                    <animate attributeName="width" values="10;15;10" dur="2s" repeatCount="indefinite" begin="1s"/>
+                </rect>
+                <rect x="285" y="5" width="10" height="190" fill="url(#flame)">
+                    <animate attributeName="width" values="10;15;10" dur="2s" repeatCount="indefinite" begin="1.5s"/>
+                </rect>
+            </svg>
+        </div>
+
+        <!-- 边框65: 像素边框 -->
+        <div class="border-item">
+            <h3>65. 像素边框</h3>
+            <svg width="300" height="200">
+                <polygon fill="rgba(0,0,0,0)" points="7,5 293,5 293,195 7,195"></polygon>
+                <!-- 像素点 -->
+                <rect x="10" y="5" width="5" height="5" fill="#FF0000"/>
+                <rect x="20" y="5" width="5" height="5" fill="#00FF00"/>
+                <rect x="30" y="5" width="5" height="5" fill="#0000FF"/>
+                <rect x="280" y="5" width="5" height="5" fill="#FF0000"/>
+                <rect x="270" y="5" width="5" height="5" fill="#00FF00"/>
+                <rect x="260" y="5" width="5" height="5" fill="#0000FF"/>
+                <rect x="10" y="190" width="5" height="5" fill="#FF0000"/>
+                <rect x="20" y="190" width="5" height="5" fill="#00FF00"/>
+                <rect x="30" y="190" width="5" height="5" fill="#0000FF"/>
+                <rect x="280" y="190" width="5" height="5" fill="#FF0000"/>
+                <rect x="270" y="190" width="5" height="5" fill="#00FF00"/>
+                <rect x="260" y="190" width="5" height="5" fill="#0000FF"/>
+                <rect x="5" y="10" width="5" height="5" fill="#FF0000"/>
+                <rect x="5" y="20" width="5" height="5" fill="#00FF00"/>
+                <rect x="5" y="30" width="5" height="5" fill="#0000FF"/>
+                <rect x="5" y="180" width="5" height="5" fill="#FF0000"/>
+                <rect x="5" y="170" width="5" height="5" fill="#00FF00"/>
+                <rect x="5" y="160" width="5" height="5" fill="#0000FF"/>
+                <rect x="290" y="10" width="5" height="5" fill="#FF0000"/>
+                <rect x="290" y="20" width="5" height="5" fill="#00FF00"/>
+                <rect x="290" y="30" width="5" height="5" fill="#0000FF"/>
+                <rect x="290" y="180" width="5" height="5" fill="#FF0000"/>
+                <rect x="290" y="170" width="5" height="5" fill="#00FF00"/>
+                <rect x="290" y="160" width="5" height="5" fill="#0000FF"/>
+                <!-- 闪烁动画 -->
+                <animate attributeName="opacity" values="1;0.5;1" dur="1s" repeatCount="indefinite"/>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,9 +1,10 @@
-import { App } from 'vue';
-import { BaseBorder, GradientBorder } from './components/borders';
+import type { App } from 'vue';
+import { BaseBorder, GradientBorder, AnimatedDashedBorder } from './components/borders';
 
 const components = {
-  BaseBorder,
-  GradientBorder
+  DecoBaseBorder: BaseBorder,
+  DecoGradientBorder: GradientBorder,
+  DecoAnimatedDashedBorder: AnimatedDashedBorder
 };
 
 export default {
@@ -15,4 +16,8 @@ export default {
 };
 
 // 允许按需引入
-export { BaseBorder, GradientBorder };
+export { 
+  BaseBorder as DecoBaseBorder, 
+  GradientBorder as DecoGradientBorder,
+  AnimatedDashedBorder as DecoAnimatedDashedBorder 
+};
