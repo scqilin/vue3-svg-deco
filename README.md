@@ -26,6 +26,24 @@ import { Border } from 'vue3-svg-deco'
 
 ## 组件
 
+### Header 头部组件
+
+```vue
+<template>
+  <DecoHeader 
+    title="数据大屏" 
+    color1="#3a7afe" 
+    color2="#00f9ff"
+    width="100%"
+    height="80"
+  />
+</template>
+
+<script setup>
+import { DecoHeader } from 'vue3-svg-deco'
+</script>
+```
+
 ### Border 边框组件
 
 ```vue
@@ -61,7 +79,7 @@ npm run build
 
 ## 计划功能
 
-- [ ] Header 头部装饰组件
+- [x] Header 头部装饰组件
 - [ ] Footer 底部装饰组件
 - [ ] Corner 角标装饰组件
 - [ ] 更多SVG装饰元素

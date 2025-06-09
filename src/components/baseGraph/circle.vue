@@ -7,7 +7,7 @@
     :stroke="stroke" 
     :stroke-width="strokeWidth" 
     :stroke-dasharray="strokeDasharray"
-    :stroke-linecap="round"
+    stroke-linecap="round"
   >
     <DashoffsetAnimate :dur="dur" :dashoffsetValues="dashoffsetValues" />
   </circle>

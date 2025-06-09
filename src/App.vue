@@ -3,6 +3,8 @@ import { BaseBorder, GradientBorder, AnimatedDashedBorder,
 PolygonBorder1, PolygonBorder2, PolygonBorder3,  PolygonBorder4, PolygonBorder5, PolygonBorder6
  } from './components/borders';
 
+ import  { Header } from './components/headers';
+
  const width = 300;
  const height = 200;
  const strokeWidth = 1;
@@ -13,6 +15,11 @@ PolygonBorder1, PolygonBorder2, PolygonBorder3,  PolygonBorder4, PolygonBorder5,
 
 <template>
   <div class="demo-container">
+    <Header :width="1200" :height="80" title="水平渐变 (0度)" color1="#3a7afe" color2="#00f9ff" textColor="#ffff00" lineColor="#ffffff" fontSize="24px" :radius="18" :angle="0"/>
+    <Header :width="1200" :height="80" title="45度渐变" color1="#3a7afe" color2="#00f9ff"  lineColor="#ffffff" fontSize="24px" :radius="18" :angle="45"/>
+    <Header :width="1200" :height="80" title="垂直渐变 (90度)" color1="#3a7afe" color2="#00f9ff" lineColor="#ffffff" fontSize="24px" :radius="18" :angle="90"/>
+    <Header :width="1200" :height="80" title="圆形渐变" color1="#00f9ff" color2="#3a7afe90" textColor="#ffffff" lineColor="#ffffff" fontSize="24px" :radius="18" gradientType="radial" :radialCenterX="50" :radialCenterY="50" :radialRadius="40"/>
+
     <BaseBorder :width="width" :height="height">
       <div class="border-content">
         <span>基础边框</span>
@@ -63,6 +70,8 @@ PolygonBorder1, PolygonBorder2, PolygonBorder3,  PolygonBorder4, PolygonBorder5,
         <span>复杂阶梯斜切边框</span>
       </div>
     </PolygonBorder6>
+
+    
   </div>
 </template>
 
