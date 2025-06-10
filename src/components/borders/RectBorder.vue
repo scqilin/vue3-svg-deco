@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { BaseRect } from '../baseGraph';
-import DecoDiv from '../common/DecoDiv.vue';
+import DecoDiv from '@/components/common/DecoDiv.vue';
 import { baseGraphProps, rectProps } from '../baseGraph/props';
 /* 基本Rect边框  */
 const props = defineProps({

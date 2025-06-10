@@ -14,14 +14,27 @@ const stroke = '#34a264'; //00f9ff
 
 <template>
   <div class="header-container">
-    <Header title="水平渐变 (0度)" color1="#3a7afe" color2="#00f9ff" textColor="#ffff00" lineColor="#ffffff" fontSize="24px"
-      :radius="18" :angle="0" />
+    <Header color1="#3a7afe" color2="#00f9ff" textColor="#ffff00" lineColor="#ffffff" fontSize="24px" :radius="18"
+      :angle="0">
+      <div class="border-content">
+        <span>水平渐变 (0度)</span>
+      </div>
+    </Header>
     <Header title="45度渐变" color1="#3a7afe" color2="#00f9ff" lineColor="#ffffff" fontSize="24px" :radius="18"
-      :angle="45" />
+      :angle="45">
+    </Header>
     <Header title="垂直渐变 (90度)" color1="#3a7afe" color2="#00f9ff" lineColor="#ffffff" fontSize="24px" :radius="18"
-      :angle="90" />
+      :angle="90">
+      <div class="border-content">
+        <span>垂直渐变 (90度)</span>
+      </div>
+    </Header>
     <Header title="圆形渐变" color1="#00f9ff" color2="#3a7afe90" textColor="#ffffff" lineColor="#ffffff" fontSize="24px"
-      :radius="18" gradientType="radial" :radialCenterX="50" :radialCenterY="50" :radialRadius="40" />
+      :radius="18" gradientType="radial" :radialCenterX="50" :radialCenterY="50" :radialRadius="40">
+      <div class="border-content">
+        <span>圆形渐变</span>
+      </div>
+    </Header>
   </div>
   <div class="demo-container">
 
@@ -138,6 +151,7 @@ const stroke = '#34a264'; //00f9ff
 
   &>* {
     width: 96%;
+    min-height: 80px;
   }
 
 }
@@ -155,6 +169,7 @@ const stroke = '#34a264'; //00f9ff
 }
 
 .border-content {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
