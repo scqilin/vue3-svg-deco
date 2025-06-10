@@ -9,9 +9,10 @@
 
 <script setup lang="ts">
 import { ref, reactive, onMounted, onBeforeUnmount, nextTick } from 'vue';
-
+const defWidth = 30;
+const defHeight = 20;
 const containerRef = ref<HTMLElement | null>(null);
-const size = reactive({ width: 30, height: 20 });
+const size = reactive({ width: defWidth, height: defHeight });
 
 let observer: ResizeObserver | null = null;
 
@@ -21,8 +22,8 @@ const updateSize = () => {
     size.width = rect.width;
     size.height = rect.height;
   } else {
-    size.width = 30; // Default width
-    size.height = 20; // Default height
+    size.width = defWidth;
+    size.height = defHeight;
     console.warn('Container reference is null, using default size.');
   }
 };

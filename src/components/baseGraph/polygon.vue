@@ -1,14 +1,14 @@
 <template>
-  <polygon
-    :points="points"
-    :fill="fill" 
-    :stroke="stroke" 
-    :stroke-width="strokeWidth" 
-    :stroke-dasharray="strokeDasharray"
-    :stroke-linecap="round"
-  >
-    <DashoffsetAnimate :dur="dur" :dashoffsetValues="dashoffsetValues" />
-  </polygon>
+    <polygon
+      :points="points"
+      :fill="fill" 
+      :stroke="stroke" 
+      :stroke-width="strokeWidth" 
+      :stroke-dasharray="strokeDasharray"
+      :stroke-linecap="round"
+    >
+      <DashoffsetAnimate v-if="dur != '0'" :dur="dur" :dashoffsetValues="dashoffsetValues" />
+    </polygon>
 </template>
 
 <script setup lang="ts">

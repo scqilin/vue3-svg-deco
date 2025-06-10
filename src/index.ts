@@ -2,7 +2,6 @@ import type { App } from 'vue';
 import { 
   BaseBorder, 
   GradientBorder, 
-  AnimatedDashedBorder,
   PolygonBorder1,
   PolygonBorder2,
   PolygonBorder3,
@@ -15,7 +14,6 @@ import { Header } from '@/components/headers';
 const components = {
   DecoBaseBorder: BaseBorder,
   DecoGradientBorder: GradientBorder,
-  DecoAnimatedDashedBorder: AnimatedDashedBorder,
   DecoPolygonBorder1: PolygonBorder1,
   DecoPolygonBorder2: PolygonBorder2,
   DecoPolygonBorder3: PolygonBorder3,
@@ -37,7 +35,6 @@ export default {
 export { 
   BaseBorder as DecoBaseBorder, 
   GradientBorder as DecoGradientBorder,
-  AnimatedDashedBorder as DecoAnimatedDashedBorder,
   PolygonBorder1 as DecoPolygonBorder1,
   PolygonBorder2 as DecoPolygonBorder2,
   PolygonBorder3 as DecoPolygonBorder3,

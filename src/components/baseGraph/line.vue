@@ -9,7 +9,7 @@
     :stroke-dasharray="strokeDasharray"
     :stroke-linecap="round"
   >
-    <DashoffsetAnimate :dur="dur" :dashoffsetValues="dashoffsetValues" />
+    <DashoffsetAnimate v-if="dur != '0'" :dur="dur" :dashoffsetValues="dashoffsetValues" />
   </line>
 </template>
 
