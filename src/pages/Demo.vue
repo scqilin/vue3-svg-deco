@@ -1,25 +1,30 @@
 <script setup lang="ts">
 import {
   BaseBorder, GradientBorder, RectBorder,
-  PolygonBorder1, PolygonBorder2, PolygonBorder3, PolygonBorder4, PolygonBorder5, PolygonBorder6
+  PolygonBorder1, PolygonBorder2, PolygonBorder3, PolygonBorder4, PolygonBorder5, PolygonBorder6,
+  PolygonBorder7, PolygonBorder8, PolygonBorder9, PolygonBorder10
 } from '@/components/borders';
 
 import { Header } from '@/components/headers';
 
-const width = 400;
-const height = 100;
 const strokeWidth = 2;
 const stroke = '#34a264'; //00f9ff
-const color2 = '#ff00ff';
-const dashoffsetAnimate = false;
+
 </script>
 
 <template>
+  <div class="header-container">
+    <Header title="水平渐变 (0度)" color1="#3a7afe" color2="#00f9ff" textColor="#ffff00" lineColor="#ffffff" fontSize="24px"
+      :radius="18" :angle="0" />
+    <Header title="45度渐变" color1="#3a7afe" color2="#00f9ff" lineColor="#ffffff" fontSize="24px" :radius="18"
+      :angle="45" />
+    <Header title="垂直渐变 (90度)" color1="#3a7afe" color2="#00f9ff" lineColor="#ffffff" fontSize="24px" :radius="18"
+      :angle="90" />
+    <Header title="圆形渐变" color1="#00f9ff" color2="#3a7afe90" textColor="#ffffff" lineColor="#ffffff" fontSize="24px"
+      :radius="18" gradientType="radial" :radialCenterX="50" :radialCenterY="50" :radialRadius="40" />
+  </div>
   <div class="demo-container">
-    <!-- <Header :width="1200" :height="80" title="水平渐变 (0度)" color1="#3a7afe" color2="#00f9ff" textColor="#ffff00" lineColor="#ffffff" fontSize="24px" :radius="18" :angle="0"/>
-    <Header :width="1200" :height="80" title="45度渐变" color1="#3a7afe" color2="#00f9ff"  lineColor="#ffffff" fontSize="24px" :radius="18" :angle="45"/>
-    <Header :width="1200" :height="80" title="垂直渐变 (90度)" color1="#3a7afe" color2="#00f9ff" lineColor="#ffffff" fontSize="24px" :radius="18" :angle="90"/>
-    <Header :width="1200" :height="80" title="圆形渐变" color1="#00f9ff" color2="#3a7afe90" textColor="#ffffff" lineColor="#ffffff" fontSize="24px" :radius="18" gradientType="radial" :radialCenterX="50" :radialCenterY="50" :radialRadius="40"/> -->
+
     <RectBorder :strokeWidth="strokeWidth" :stroke="stroke">
       <div class="border-content">
         <span>矩形边框</span>
@@ -54,17 +59,18 @@ const dashoffsetAnimate = false;
     </GradientBorder>
 
     <PolygonBorder1 :bevelSize="15">
-      <div class="border-content" >
+      <div class="border-content">
         <span>多边形边框1</span>
       </div>
     </PolygonBorder1>
-    <PolygonBorder1 :strokeWidth="strokeWidth" :stroke="stroke" :strokeDasharray="'12,8'" :dur="'5s'" :dashoffsetValues="'0;40;0'">
+    <PolygonBorder1 :strokeWidth="strokeWidth" :stroke="stroke" :strokeDasharray="'12,8'" :dur="'5s'"
+      :dashoffsetValues="'0;40;0'">
       <div class="border-content">
         <span>多边形边框2</span>
       </div>
     </PolygonBorder1>
     <PolygonBorder2 :bevelSize="10">
-      <div class="border-content" >
+      <div class="border-content">
         <span>阶梯状圆角边框1</span>
       </div>
     </PolygonBorder2>
@@ -88,19 +94,58 @@ const dashoffsetAnimate = false;
         <span>复杂斜切边框</span>
       </div>
     </PolygonBorder5>
-    <PolygonBorder6 :strokeWidth="strokeWidth" :stroke="stroke" >
+    <PolygonBorder6 :strokeWidth="strokeWidth" :stroke="stroke">
       <div class="border-content">
         <span>复杂阶梯斜切边框</span>
       </div>
     </PolygonBorder6>
+    <PolygonBorder7 :strokeWidth="strokeWidth" :stroke="stroke">
+      <div class="border-content">
+        <span>上下凹槽边框</span>
+      </div>
+    </PolygonBorder7>
+    <PolygonBorder8 :strokeWidth="strokeWidth" :stroke="stroke">
+      <div class="border-content">
+        <span>8波浪形边框</span>
+      </div>
+    </PolygonBorder8>
+    <PolygonBorder9 :strokeWidth="strokeWidth" :stroke="stroke">
+      <div class="border-content">
+        <span>9波浪形边框</span>
+      </div>
+    </PolygonBorder9>
+    <PolygonBorder10 :strokeWidth="10" :stroke="stroke">
+      <div class="border-content">
+        <span>10波浪形边框1</span>
+      </div>
+    </PolygonBorder10>
+    <PolygonBorder10 :strokeWidth="12" :stroke="'#00f4a0'" :strokeDasharray="'20,5'" :dur="'10s'">
+      <div class="border-content">
+        <span>10波浪形边框2</span>
+      </div>
+    </PolygonBorder10>
   </div>
 </template>
 
 <style scoped>
+.header-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+
+  &>* {
+    width: 96%;
+  }
+
+}
+
 .demo-container {
   padding: 2rem;
   display: grid;
-  grid-template-columns: repeat(5, minmax(100px, 1fr));
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
   gap: 1rem;
 
   &>* {
