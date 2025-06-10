@@ -16,14 +16,10 @@
       :stroke="color"
       :stroke-width="strokeWidth"
     />
-    <ForeignObjectWrapper :xy="strokeWidth" :width="width" :height="height">
-      <slot></slot>
-    </ForeignObjectWrapper>
   </svg>
 </template>
 
 <script setup lang="ts">
-import ForeignObjectWrapper from '../common/ForeignObjectWrapper.vue';
 import DashoffsetAnimate from '../common/DashoffsetAnimate.vue';
 import { defineProps } from 'vue';
 

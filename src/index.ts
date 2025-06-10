@@ -9,8 +9,8 @@ import {
   PolygonBorder4,
   PolygonBorder5,
   PolygonBorder6
-} from './components/borders';
-import { Header } from './components/headers';
+} from '@/components/borders';
+import { Header } from '@/components/headers';
 
 const components = {
   DecoBaseBorder: BaseBorder,

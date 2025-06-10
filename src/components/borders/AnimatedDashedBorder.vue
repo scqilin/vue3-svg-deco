@@ -21,15 +21,11 @@
         repeatCount="indefinite"
       />
     </rect>
-    <ForeignObjectWrapper :xy="props.strokeWidth" :width="width" :height="height">
-      <slot></slot>
-    </ForeignObjectWrapper>
   </svg>
 </template>
 
 <script setup lang="ts">
 import { defineProps } from 'vue';
-import ForeignObjectWrapper from '../common/ForeignObjectWrapper.vue';
 
 const props = defineProps({
   width: { type: Number, default: 200 },

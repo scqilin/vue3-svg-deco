@@ -63,7 +63,8 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, computed } from 'vue';
+import { computed } from 'vue';
+import { getUid } from '@/utils/uid';
 
 const props = defineProps({
   width: { type: Number, default: 800 },
@@ -106,5 +107,5 @@ const gradientEndY = computed(() => {
   return `${50 - 50 * Math.sin(rad)}%`;
 });
 
-const uid =  Math.random().toString(36).substring(2);
+const uid = getUid();
 </script>

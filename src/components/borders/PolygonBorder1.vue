@@ -16,15 +16,11 @@
         repeatCount="indefinite"
       />
     </polygon>
-    <ForeignObjectWrapper :xy="strokeWidth" :width="width" :height="height">
-      <slot></slot>
-    </ForeignObjectWrapper>
   </svg>
 </template>
 
 <script setup lang="ts">
-import { defineProps, computed } from 'vue';
-import ForeignObjectWrapper from '../common/ForeignObjectWrapper.vue';
+import { computed } from 'vue';
 
 const props = defineProps({
   width: { type: Number, default: 200 },

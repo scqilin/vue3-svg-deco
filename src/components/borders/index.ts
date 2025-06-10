@@ -7,3 +7,5 @@ export { default as PolygonBorder3 } from './PolygonBorder3.vue'
 export { default as PolygonBorder4 } from './PolygonBorder4.vue'
 export { default as PolygonBorder5 } from './PolygonBorder5.vue'
 export { default as PolygonBorder6 } from './PolygonBorder6.vue'
+
+export { default as RectBorder } from './RectBorder.vue'

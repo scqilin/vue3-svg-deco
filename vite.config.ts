@@ -11,6 +11,11 @@ export default defineConfig({
       tsconfigPath: './tsconfig.app.json' // 指定 TypeScript 配置文件
     })
   ],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+    },
+  },
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
