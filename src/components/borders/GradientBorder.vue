@@ -36,7 +36,4 @@ const props = defineProps({
 </script>
 
 <style scoped>
-.svg-border {
-  display: inline-block;
-}
 </style>

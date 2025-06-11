@@ -24,7 +24,8 @@
       "import": "./dist/vue3-svg-deco.js",
       "require": "./dist/vue3-svg-deco.umd.js",
       "default": "./dist/vue3-svg-deco.js"
-    }
+    },
+    "./vue3-svg-deco.css": "./dist/vue3-svg-deco.css"
   },
   "types": "dist/index.d.ts",
   "files": [
@@ -35,7 +36,8 @@
     "dev": "vite",
     "build": "vue-tsc -b && vite build && terser dist/vue3-svg-deco.js -c -m -o dist/vue3-svg-deco.js",
     "preview": "vite preview",
-    "publish": "npm publish"
+    "publish": "npm publish",
+    "pack": "npm pack --pack-destination dist"
   },
   "dependencies": {
     "vue": "^3.5.13",
@@ -49,5 +51,8 @@
     "vite": "^6.3.5",
     "vite-plugin-dts": "^4.5.4",
     "vue-tsc": "^2.2.8"
-  }
+  },
+  "sideEffects": [
+    "*.css"
+  ]
 }

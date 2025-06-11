@@ -14,6 +14,7 @@ npm install vue3-svg-deco
 
 ```javascript
 import { createApp } from 'vue'
+import 'vue3-svg-deco/vue3-svg-deco.css'; // 样式文件
 import Vue3SvgDeco from 'vue3-svg-deco'
 import App from './App.vue'
 

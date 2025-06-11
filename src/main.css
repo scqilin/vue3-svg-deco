@@ -1,0 +1,7 @@
+/* lib样式文件 build的时候使用 */
+.vue3-svg-deco {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+}
