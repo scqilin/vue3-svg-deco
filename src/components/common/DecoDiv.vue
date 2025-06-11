@@ -1,5 +1,5 @@
 <template>
-  <div ref="containerRef" class="deco-content">
+  <div ref="containerRef" style="position: relative; width: 100%; height: 100%; display: inline-block;">
     <svg :width="size.width" :height="size.height" style="position: absolute;" xmlns="http://www.w3.org/2000/svg">
       <slot name="svg" :slotWidth="size.width" :slotHeight="size.height"></slot>
     </svg>
@@ -47,10 +47,5 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-.deco-content {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
+
 </style>

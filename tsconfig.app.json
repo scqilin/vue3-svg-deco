@@ -9,11 +9,11 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    "types": ["vitest/globals", "vue-router"],
-     "baseUrl": "./",
-      "paths": {
-        "@/*": ["src/*"]
-      }
+    "types": ["vue-router"],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
 }

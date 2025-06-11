@@ -1,18 +1,14 @@
 import type { App } from 'vue';
 import { 
-  BaseBorder, 
-  GradientBorder, 
-  PolygonBorder1,
-  PolygonBorder2,
-  PolygonBorder3,
-  PolygonBorder4,
-  PolygonBorder5,
-  PolygonBorder6
+  BaseBorder, GradientBorder, RectBorder,
+  PolygonBorder1, PolygonBorder2, PolygonBorder3, PolygonBorder4, PolygonBorder5, PolygonBorder6,
+  PolygonBorder7, PolygonBorder8, PolygonBorder9, PolygonBorder10
 } from '@/components/borders';
 import { Header } from '@/components/headers';
 
 const components = {
   DecoBaseBorder: BaseBorder,
+  DecoRectBorder: RectBorder,
   DecoGradientBorder: GradientBorder,
   DecoPolygonBorder1: PolygonBorder1,
   DecoPolygonBorder2: PolygonBorder2,
@@ -20,6 +16,10 @@ const components = {
   DecoPolygonBorder4: PolygonBorder4,
   DecoPolygonBorder5: PolygonBorder5,
   DecoPolygonBorder6: PolygonBorder6,
+  DecoPolygonBorder7: PolygonBorder7,
+  DecoPolygonBorder8: PolygonBorder8,
+  DecoPolygonBorder9: PolygonBorder9,
+  DecoPolygonBorder10: PolygonBorder10,
   DecoHeader: Header
 };
 
@@ -32,14 +32,19 @@ export default {
 };
 
 // 允许按需引入
-export { 
-  BaseBorder as DecoBaseBorder, 
-  GradientBorder as DecoGradientBorder,
-  PolygonBorder1 as DecoPolygonBorder1,
-  PolygonBorder2 as DecoPolygonBorder2,
-  PolygonBorder3 as DecoPolygonBorder3,
-  PolygonBorder4 as DecoPolygonBorder4,
-  PolygonBorder5 as DecoPolygonBorder5,
-  PolygonBorder6 as DecoPolygonBorder6,
-  Header as DecoHeader
+export {
+  BaseBorder,
+  RectBorder,
+  GradientBorder,
+  PolygonBorder1,
+  PolygonBorder2,
+  PolygonBorder3,
+  PolygonBorder4,
+  PolygonBorder5,
+  PolygonBorder6,
+  PolygonBorder7,
+  PolygonBorder8,
+  PolygonBorder9,
+  PolygonBorder10,
+  Header
 };

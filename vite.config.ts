@@ -20,7 +20,11 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'Vue3SvgDeco',
-      fileName: (format) => `vue3-svg-deco.${format}.js`,
+      fileName: (format) => {
+        if (format === 'es') return 'vue3-svg-deco.js';
+        if (format === 'umd') return 'vue3-svg-deco.umd.js';
+        return `vue3-svg-deco.${format}.js`;
+      },
     },
     rollupOptions: {
       external: ['vue'],
