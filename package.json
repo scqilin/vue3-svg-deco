@@ -33,7 +33,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "vue-tsc -b && vite build && terser dist/vue3-svg-deco.js -c -m -o dist/vue3-svg-deco.js",
     "preview": "vite preview",
     "publish": "npm publish"
   },
@@ -44,6 +44,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.3",
     "@vue/tsconfig": "^0.7.0",
+    "terser": "^5.42.0",
     "typescript": "~5.8.3",
     "vite": "^6.3.5",
     "vite-plugin-dts": "^4.5.4",

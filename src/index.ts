@@ -1,50 +1,28 @@
 import type { App } from 'vue';
-import { 
-  BaseBorder, GradientBorder, RectBorder,
-  PolygonBorder1, PolygonBorder2, PolygonBorder3, PolygonBorder4, PolygonBorder5, PolygonBorder6,
-  PolygonBorder7, PolygonBorder8, PolygonBorder9, PolygonBorder10
-} from '@/components/borders';
-import { Header } from '@/components/headers';
+import type { Component } from 'vue';
+import * as borders from '@/components/borders';
+import * as headers from '@/components/headers';
 
-const components = {
-  DecoBaseBorder: BaseBorder,
-  DecoRectBorder: RectBorder,
-  DecoGradientBorder: GradientBorder,
-  DecoPolygonBorder1: PolygonBorder1,
-  DecoPolygonBorder2: PolygonBorder2,
-  DecoPolygonBorder3: PolygonBorder3,
-  DecoPolygonBorder4: PolygonBorder4,
-  DecoPolygonBorder5: PolygonBorder5,
-  DecoPolygonBorder6: PolygonBorder6,
-  DecoPolygonBorder7: PolygonBorder7,
-  DecoPolygonBorder8: PolygonBorder8,
-  DecoPolygonBorder9: PolygonBorder9,
-  DecoPolygonBorder10: PolygonBorder10,
-  DecoHeader: Header
-};
+type ComponentEntry = [string, Component];
 
+/**
+ * Vue3 SVG装饰组件库
+ * 包含各种SVG边框、图形和装饰组件
+ */
 export default {
   install(app: App) {
-    Object.entries(components).forEach(([name, component]) => {
+    // 自动注册所有组件
+    const components: ComponentEntry[] = [
+      ...Object.entries(borders),
+      ...Object.entries(headers),
+    ] as ComponentEntry[];
+
+    components.forEach(([name, component]) => {
       app.component(name, component);
     });
-  },
+  }
 };
 
-// 允许按需引入
-export {
-  BaseBorder,
-  RectBorder,
-  GradientBorder,
-  PolygonBorder1,
-  PolygonBorder2,
-  PolygonBorder3,
-  PolygonBorder4,
-  PolygonBorder5,
-  PolygonBorder6,
-  PolygonBorder7,
-  PolygonBorder8,
-  PolygonBorder9,
-  PolygonBorder10,
-  Header
-};
+// 导出所有组件和类型
+export * from '@/components/borders';
+export * from '@/components/headers';

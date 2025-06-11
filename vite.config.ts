@@ -27,7 +27,7 @@ export default defineConfig({
       },
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue'], // 避免将 vue 打包进产物
       output: {
         globals: {
           vue: 'Vue',
@@ -35,5 +35,16 @@ export default defineConfig({
         exports: 'named',
       },
     },
+    terserOptions: {
+      compress: {
+        drop_console: true, // 移除 console
+        drop_debugger: true, // 移除 debugger
+        pure_funcs: ['console.log'], // 可选：进一步移除 console.log
+      },
+      format: {
+        comments: false, // 去除注释
+      },
+    },
+    minify: 'terser', // 使用 terser 进行压缩
   },
 });
