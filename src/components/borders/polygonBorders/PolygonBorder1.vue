@@ -1,16 +1,16 @@
 <template>
-  <DecoDiv>
+  <DecoDiv :width = props.width :height="props.height">
     <slot></slot>
-    <template #svg="{ slotWidth, slotHeight }">
-      <BasePolygon v-bind="props" :width="slotWidth" :height="slotHeight"
-        :points="computedPoints(slotWidth, slotHeight)" />
+    <template #svg>
+      <BasePolygon v-bind="props" :width="props.width" :height="props.height"
+        :points="props.points || computedPoints(props.width, props.height)" />
     </template>
   </DecoDiv>
 </template>
 
 <script setup lang="ts">
 import { baseGraphProps, polygonProps } from '../../baseGraph/props';
-import { BasePolygon } from '../../baseGraph';``
+import { BasePolygon } from '../../baseGraph';
 import DecoDiv from '../../common/DecoDiv.vue';
 const props = defineProps({
   ...baseGraphProps,
@@ -21,7 +21,6 @@ const props = defineProps({
 const computedPoints = (width: number, height: number) => {
   const { bevelSize, strokeWidth } = props;
   const inset = strokeWidth / 2;
-  console.log('PolygonBorder1', { width, height, bevelSize, inset });
   return [
     [bevelSize + inset, inset],
     [width - bevelSize - inset, inset],

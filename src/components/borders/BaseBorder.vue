@@ -1,15 +1,15 @@
 <template>
-  <DecoDiv>
+  <DecoDiv :width = props.width :height="props.height">
     <slot></slot>
-    <template #svg="{ slotWidth, slotHeight }">
+    <template #svg>
       <!-- 左上角折线 -->
       <BasePolyline v-bind="props" :points="lt" />
       <!-- 右上角折线 -->
-      <BasePolyline v-bind="props" :points="rt(slotWidth)" />
+      <BasePolyline v-bind="props" :points="rt(props.width)" />
       <!-- 右下角折线 -->
-      <BasePolyline v-bind="props" :points="rb(slotWidth, slotHeight)" />
+      <BasePolyline v-bind="props" :points="rb(props.width, props.height)" />
       <!-- 左下角折线 -->
-      <BasePolyline v-bind="props" :points="lb(slotHeight)" />
+      <BasePolyline v-bind="props" :points="lb(props.height)" />
     </template>
   </DecoDiv>
 </template>

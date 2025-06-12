@@ -45,17 +45,17 @@ export const lineProps = {
   y2: { type: Number, default: 10 }
 };
 
-// 多边形props
+// 多边形props 3.55,81.35 3.55,3.39 106.64,3.39 113.75,10.74 295.93,10.74 300,13.56 300,196.61 135.57,196.61 131.48,192.23 3.55,192.23 3.55,81.35
 export const polygonProps = {
-  points: { type: String, default: '3.55,81.35 3.55,3.39 106.64,3.39 113.75,10.74 295.93,10.74 300,13.56 300,196.61 135.57,196.61 131.48,192.23 3.55,192.23 3.55,81.35' }
+  points: { type: String, default: '' }
 };
 
-// 折线props
+// 折线props 10,40 10,30 20,20 100,20 110,30 282,30 292,40
 export const polylineProps = {
-  points: { type: String, default: '10,40 10,30 20,20 100,20 110,30 282,30 292,40' }
+  points: { type: String, default: '' }
 };
 
-// 路径props
+// 路径props M 20 60 L 20 15 L 27 8 L 95 8 L 102 15 L 285 15 L 290 20 L 290 180 L 230 180 L 223 187 L 13 187 L 10 184 L 10 60
 export const pathProps = {
-  d: { type: String, default: 'M 20 60 L 20 15 L 27 8 L 95 8 L 102 15 L 285 15 L 290 20 L 290 180 L 230 180 L 223 187 L 13 187 L 10 184 L 10 60' }
+  d: { type: String, default: '' }
 };

@@ -1,7 +1,7 @@
 {
   "name": "vue3-svg-deco",
   "private": false,
-  "version": "0.6.0",
+  "version": "0.6.3",
   "description": "A Vue 3 SVG-based decoration component library for dashboards (borders, headers, corners, etc.)",
   "keywords": [
     "vue3",
@@ -34,7 +34,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build && terser dist/vue3-svg-deco.js -c -m -o dist/vue3-svg-deco.js",
+    "build": "vue-tsc -b && vite build",
+    "build-min": "vue-tsc -b && vite build && terser dist/vue3-svg-deco.js --compress drop_console=true,drop_debugger=true,pure_funcs=['console.log'] -m -o dist/vue3-svg-deco.js",
     "preview": "vite preview",
     "publish": "npm publish",
     "pack": "npm pack --pack-destination dist"

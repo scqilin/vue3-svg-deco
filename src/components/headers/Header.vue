@@ -1,7 +1,7 @@
 <template>
-  <DecoDiv>
+  <DecoDiv :width = props.width :height="props.height">
     <slot></slot>
-    <template #svg="{ slotWidth, slotHeight }">
+    <template #svg>
       <defs>
         <linearGradient v-if="gradientType === 'linear'" :id="`headerGradient-${uid}`" :x1="gradientStartX"
           :y1="gradientStartY" :x2="gradientEndX" :y2="gradientEndY">
@@ -14,13 +14,13 @@
           <stop offset="100%" :stop-color="color2" />
         </radialGradient>
       </defs>
-      <rect :width="slotWidth" :height="slotHeight" :fill="`url(#headerGradient-${uid})`" :rx="radius" :ry="radius" />
+      <rect :width="props.width" :height="props.height" :fill="`url(#headerGradient-${uid})`" :rx="radius" :ry="radius" />
       <!-- 标题文字 -->
       <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" :fill="textColor" :font-size="fontSize"
         font-weight="bold">
         {{ title }}
       </text>
-      <line :x1="slotWidth * 0.1" :y1="slotHeight * 0.9" :x2="slotWidth * 0.9" :y2="slotHeight * 0.9"
+      <line :x1="props.width * 0.1" :y1="props.height * 0.9" :x2="props.width * 0.9" :y2="props.height * 0.9"
         :stroke="lineColor" stroke-width="2" stroke-dasharray="5,3" />
     </template>
   </DecoDiv>
@@ -32,6 +32,8 @@ import DecoDiv from '@/components/common/DecoDiv.vue';
 import { getUid } from '@/utils/uid';
 
 const props = defineProps({
+  width: { type: Number, default: 300 },
+  height: { type: Number, default: 100 },
   title: { type: String, default: '' },
   color1: { type: String, default: '#3a7afe' },
   color2: { type: String, default: '#00f9ff' },

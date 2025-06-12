@@ -1,7 +1,7 @@
 <template>
-  <DecoDiv>
+  <DecoDiv :width = props.width :height="props.height">
     <slot></slot>
-    <template #svg="{ slotWidth, slotHeight }">
+    <template #svg>
       <defs>
         <linearGradient :id="`gradient-${uid}`" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" :stop-color="colors[0]" />
@@ -16,7 +16,7 @@
           />
         </linearGradient>
       </defs>
-      <BaseRect v-bind="props" :width="slotWidth" :height="slotHeight" :stroke="`url(#gradient-${uid})`"/>
+      <BaseRect v-bind="props" :width="props.width" :height="props.height" :stroke="`url(#gradient-${uid})`"/>
     </template>
   </DecoDiv>
 </template>

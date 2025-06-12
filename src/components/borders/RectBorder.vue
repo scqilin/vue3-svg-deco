@@ -1,8 +1,8 @@
 <template>
-  <DecoDiv>
+  <DecoDiv :width = props.width :height="props.height">
     <slot></slot>
-    <template #svg="{ slotWidth, slotHeight }">
-      <BaseRect v-bind="props" :width="slotWidth" :height="slotHeight" />
+    <template #svg>
+      <BaseRect v-bind="props" :width="props.width" :height="props.height" />
     </template>
   </DecoDiv>
 </template>

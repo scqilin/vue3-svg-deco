@@ -1,9 +1,9 @@
 <template>
-  <DecoDiv>
+  <DecoDiv :width = props.width :height="props.height">
     <slot></slot>
-    <template #svg="{ slotWidth, slotHeight }">
-      <BasePolygon v-bind="props" :width="slotWidth" :height="slotHeight"
-        :points="computedPoints(slotWidth, slotHeight)" />
+    <template #svg>
+      <BasePolygon v-bind="props" :width="props.width" :height="props.height"
+        :points="computedPoints(props.width, props.height)" />
     </template>
   </DecoDiv>
 </template>
